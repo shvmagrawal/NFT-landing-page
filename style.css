@@ -30,8 +30,26 @@ header {
     margin-left: 3rem;
 }
 
+#icon img {
+    width: 40px;
+    height: 40px;
+}
+
 #profile-icon {
     margin-right: 3rem;
+}
+
+#profile-icon img {
+    width: 40px;
+    height: 40px;
+}
+
+#profile-icon button {
+    background-color: black;
+}
+
+#profile-icon button:hover {
+    cursor: pointer;
 }
 
 /* Designing main section */
@@ -55,7 +73,7 @@ main #first .container {
     flex-direction: column;
     justify-content: space-between;
     height: 580px;
-    width: 570px;
+    max-width: 570px;
 }
 
 main #first .container .first {
@@ -103,6 +121,7 @@ main #first .container .second .sale-time {
 #first .btn-pay {
     padding: 1rem 1.5rem;
     color: white;
+    border: none;
     background-image: linear-gradient(60deg, rgba(0, 157, 255, 0.7), rgba(255, 0, 251, 0.7));
     border-radius: 0.5rem;
     font-weight: 600;
@@ -117,7 +136,7 @@ main #first .container .second .sale-time {
 
 /* Designing benifits section */
 
-#benefits,#terms,#risks {
+#benefits,#terms,#risks,#buy,#stay-connected {
     width: 73rem;
     border: 1px solid white;
     margin: 3rem 11rem;
@@ -127,8 +146,6 @@ main #first .container .second .sale-time {
 #benefits {
     height: 30rem;
 }
-
-
 
  .investement-first-div {
     padding: 0 5rem;
@@ -141,8 +158,13 @@ main #first .container .second .sale-time {
     margin: 2rem 0;
 }
 
- .investement-first-div .sign {
+ main .sign {
     font-size: 2.2rem;
+}
+
+main .sign:hover {
+    cursor: pointer;
+    text-shadow: 2px 2px 10px white, -2px -2px 10px white;
 }
 
  .investement-first-div p {
@@ -158,4 +180,206 @@ Designing terms section */
 
 #terms {
     height: 25rem;
+}
+
+
+
+/* Designing buy div */
+
+#buy .buy-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#buy .pic {
+    width: 350px;
+    height: 250px;
+    border: 2px solid rgb(255, 255, 255);
+    margin: 2rem;
+}
+
+.buy-first-div {
+    width: 40rem;
+    padding: 0 5rem 0 0 ;
+}
+
+.buy-first-div div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.buy-first-div p {
+    margin: 0rem 2rem 1rem 0rem;
+}
+
+
+
+#stay-connected {
+    height: 26rem;
+}
+
+
+#stay-connected .connection-links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* border: 1px solid green; */
+    margin: 1rem 6rem;
+    padding: 2rem 0;
+}
+
+#stay-connected .connection-links div {
+    width: 300px;
+    height: 270px;
+    background-color: rgb(18, 18, 18);
+    text-align: center;
+}
+
+#stay-connected .connection-links div:hover {
+    cursor: pointer;
+    border: 1px solid white;
+}
+
+
+
+/* designing more from this section */
+
+#more {
+    width: 77rem;
+    /* border: 1px solid white; */
+    border-top: 1px solid white;
+    margin: 3rem 9rem;
+    height: 32rem;
+    padding: 5rem 3rem 2rem 3rem;
+}
+
+#more h2 span:first-child {
+    margin: 0 1rem 0 3rem;
+}
+
+#more h2 span button {
+    color: white;
+    background-color: rgba(60, 60, 60, 0.8);
+    border-radius: 50%;
+    padding: 0.2rem 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+#more h2 span button:hover {
+    cursor: pointer;
+}
+
+#more .item-price {
+    margin: 2rem 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+#more .item-price .items {
+    width: 250px;
+    height: 280px;
+    /* border: 1px solid rgb(4, 50, 84); */
+    border-radius: 1rem;
+    padding: 1rem;
+    background-color: rgba(30, 30, 30, 0.8);
+}
+
+#more .item-price div img {
+    width: 250px;
+    height: 170px;
+    border-radius: 0.5rem;
+}
+
+#more .item-price .artist-id {
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+}
+
+#more .item-price .buy-now {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem;
+    margin: 0.5rem 0;
+    /* border: 1px solid red; */
+    border-radius: 1rem;
+    background-color: black;
+}
+
+#more .item-price .buy-now p {
+    font-size: 12px;
+}
+
+#more .item-price .buy-now button {
+    padding: 0.4rem 0.7rem;
+    color: white;
+    border: none;
+    background-image: linear-gradient(60deg, rgba(0, 157, 255, 0.7), rgba(255, 0, 251, 0.7));
+    border-radius: 1rem;
+    font-weight: 600;
+    /* margin-top: 1rem; */
+}
+
+#more .item-price .buy-now button:hover {
+    cursor: pointer;
+    background-image: linear-gradient(60deg, rgba(0, 157, 255, 0.9), rgba(255, 0, 251, 0.9));
+}
+
+#more .view-project {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#more .btn-view-project {
+    font-weight: 600;
+    border: 1px solid white;
+    border-radius: 2rem;
+    color: white;
+    background-color: black;
+    padding: 1rem 3rem;
+}
+
+#more .btn-view-project:hover {
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 2rem;
+    color: black;
+    background-color: white;
+}
+
+
+
+/* Designing footer */
+
+footer {
+    /* border: 2px solid whitesmoke; */
+    padding: 0 0 3rem 10rem;
+    margin-bottom: 1.5rem;
+}
+
+
+footer ul {
+    list-style: none;
+    display: flex;
+}
+
+footer ul li {
+    margin: 0 1rem;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+    opacity: 0.5;
+    /* display: block; */
+}
+
+footer a:hover {
+    opacity: 0.9;
 }
