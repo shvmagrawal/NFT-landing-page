@@ -7,11 +7,13 @@ body {
     background-color: black;
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* box-sizing: content-box; */
 }
 
 hr {
     border: 0.1px solid rgb(90, 90, 90);
 }
+
 
 
 /* Designing header */
@@ -25,13 +27,14 @@ header {
     margin-bottom: 0rem;
 }
 
-#icon {
-    margin-left: 3rem;
-}
 
 #icon img {
     width: 40px;
     height: 40px;
+}
+
+#icon {
+    margin-left: 3rem;
 }
 
 #profile-icon {
@@ -62,16 +65,18 @@ main {
 
 
 main #first {
-    margin: 0 8rem;
-    width: 70vw;
+    /* margin: 0 4rem; */
+    width: 75vw;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 main #first img {
+    /* width: 500px; */
     width: 45%;
-    height: 45%;
+    height: 600px;
+    margin-right: 1rem;
     border-radius: 0.7rem;
     box-shadow: -1px -1px 3px white;
 }
@@ -80,8 +85,8 @@ main #first .container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 580px;
-    width: 45%;
+    height: 600px;
+    /* width: 45%; */
 }
 
 main #first .container .first {
@@ -109,7 +114,7 @@ main #first .container .second {
     padding: 1rem;
     border: 1px solid white;
     text-align: center;
-    min-height: 400px;
+    min-height: 380px;
 }
 
 main #units {
@@ -119,10 +124,9 @@ main #units {
     font-weight: 600;
 }
 
-/* main #units:hover {
+main #units:hover {
     cursor: pointer;
-} */
-
+}
 
 
 .container .second div span {
@@ -149,22 +153,24 @@ main #first .container .second .sale-time {
     border-radius: 0.5rem;
     font-weight: 600;
     margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 #first .btn-pay:hover {
     cursor: pointer;
     background-image: linear-gradient(60deg, rgba(0, 157, 255, 0.85), rgba(255, 0, 251, 0.85));
+    box-shadow: 2px 2px 10px white, -2px -2px 10px white;
 }
+
+
 
 
 /* Designing benifits section */
 
 #benefits,#terms,#risks,#buy,#stay-connected {
-    /* width: 73rem; */
     width: 70vw;
     border: 1px solid white;
     margin: 3rem 0;
-    /* padding: 0 2rem; */
 }
 
 #benefits {
@@ -184,11 +190,12 @@ main #first .container .second .sale-time {
 
  main .sign {
     font-size: 2.2rem;
+    margin-left: 1.5rem;
 }
 
 main .sign:hover {
     cursor: pointer;
-    text-shadow: 2px 2px 10px white, -2px -2px 10px white;
+    /* text-shadow: 2px 2px 10px white, -2px -2px 10px white; */
 }
 
  .investement-first-div p {
@@ -214,25 +221,31 @@ Designing terms section */
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 #buy .pic {
-    width: 350px;
-    height: 250px;
+    /* width: 250px; */
+    width: 250px;
+    height: 200px;
     border: 2px solid rgb(255, 255, 255);
     margin: 2rem;
 }
 
 .buy-first-div {
-    width: 40rem;
+    max-width: 35rem;
     padding: 0 5rem 0 0 ;
 }
 
 .buy-first-div div {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     margin: 2rem 0;
+}
+
+.buy-first-div div h3 {
+    margin-left: 0rem;
 }
 
 .buy-first-div p {
@@ -278,7 +291,7 @@ Designing terms section */
     width: 80vw;
     border: 1px solid white;
     /* border-top: 1px solid white; */
-    margin: 3rem 9rem;
+    margin: 3rem 0rem;
     min-height: 32rem;
     padding: 5rem 3rem 2rem 3rem;
 }
@@ -318,7 +331,7 @@ Designing terms section */
 }
 
 #more .item-price div img {
-    width: 80%;
+    width: 100%;
     height: 170px;
     border-radius: 0.5rem;
 }
@@ -391,7 +404,6 @@ footer {
     margin-bottom: 1.5rem;
 }
 
-
 footer ul {
     list-style: none;
     display: flex;
@@ -411,3 +423,126 @@ footer a {
 footer a:hover {
     opacity: 0.9;
 }
+
+/* Adding media queries */
+
+@media screen and (max-width: 1080px) {
+    main #first {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 2rem;
+    }
+
+     main #first img {
+        display: none;
+    } 
+
+
+    #buy .buy-div {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 2rem;
+    }
+
+    .buy-first-div {
+         width: 100%;
+        /* padding: 0 2rem 0 0 ; */
+    }
+
+}
+
+
+
+@media screen and (max-width: 920px) {
+    .investement-first-div p {
+        margin: 0rem 1rem 1rem 0rem;
+    }
+    
+    .investement-first-div {
+        padding: 0 1rem;
+    }
+
+    .section-main-heading {
+        margin: 1rem 2rem;
+    }
+
+    footer {
+        padding: 0 0 3rem 3rem;
+    }
+
+    footer ul li {
+        margin: 0 0.5rem;
+    }
+
+    #buy .pic {
+        margin-right: auto;
+        /* margin-left: auto; */
+    }
+
+    #more {
+        padding: 2rem 1rem 1rem 1rem;
+    }
+
+    #stay-connected .connection-links {
+        margin: 0.5rem 0.5rem;
+        padding: 1rem 0;
+    }
+
+  }
+
+
+  @media screen and (max-width: 476px) {
+
+
+    body {
+        font-size: 12px;
+    }
+
+/* 
+    main #first .container .first h1 {
+        font-size: 1.7rem;
+    } */
+
+    main #first .container .second {
+        padding-bottom: 4rem;
+        /* margin-top: 5rem; */
+    }
+    
+
+    #benefits,#terms,#risks,#buy,#stay-connected {
+        border: 1px solid white;
+    }
+
+   main .sign {
+    margin-left: 0.5rem;
+   }
+
+    footer {
+        /* width: 100vw; */
+        padding: 0 0 1rem 1rem;
+        margin: 1rem;
+        font-size: 13px;
+    }
+
+    footer ul {
+        flex-wrap: wrap;
+    }
+
+    footer ul li{
+        margin: 0.5rem;
+    }
+
+    #buy .pic {
+        display: none;
+    }
+
+    #icon {
+        margin-left: 1rem;
+    }
+    
+    #profile-icon {
+        margin-right: 1rem;
+    }
+    
+
+  }
